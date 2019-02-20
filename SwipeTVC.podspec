@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
 TODO: This pod is under construction. Need to make this longer soon.
                        DESC
 
-  s.homepage         = 'https://github.com/acct<blob>=<NULL>/SwipeTVC'
+  s.homepage         = 'https://github.com/drewburns/SwipeTVC'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'acct<blob>=<NULL>' => 'drewburnsbab@gmail.com' }
@@ -29,6 +29,7 @@ TODO: This pod is under construction. Need to make this longer soon.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.swift_version = '4.2'
 
   s.source_files = 'SwipeTVC/Classes/**/*'
   
