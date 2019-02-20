@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: This pod is under construction
+TODO: This pod is under construction. Need to make this longer soon.
                        DESC
 
   s.homepage         = 'https://github.com/acct<blob>=<NULL>/SwipeTVC'

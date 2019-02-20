@@ -16,7 +16,7 @@ public class SwipeTVC: UITableViewCell {
         behindView = userBehindView
         mainView = userMainView
         self.addSubview(mainView)
-        self.drawBehindView(behindView)
+        self.drawBehindView(behindView: userBehindView)
     
         self.drawSwipeView(frame: slideAreaFrame)
     }
@@ -25,7 +25,7 @@ public class SwipeTVC: UITableViewCell {
         swipeView = UIView(frame: frame)
         swipeView.backgroundColor = UIColor.clear
         self.mainView.addSubview(swipeView)
-        rightSwipe = UIPanGestureRecognizer(target: self, action:#selector(HomeTableViewCell.draggedView(_:)))
+        rightSwipe = UIPanGestureRecognizer(target: self, action:#selector(self.draggedView(_:)))
         swipeView.addGestureRecognizer(rightSwipe)
     }
     fileprivate func drawBehindView(behindView: UIView) {
