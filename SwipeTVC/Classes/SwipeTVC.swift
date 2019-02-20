@@ -8,11 +8,14 @@ public class SwipeTVC: UITableViewCell {
     var rightSwipe:UIPanGestureRecognizer!
     var swipeView: UIView!
     var behindView: UIView!
+    var mainView: UIView!
     
-    public func setUp(userBehindView: UIView, slideAreaFrame: CGRect){
+    public func setUp(userBehindView: UIView, slideAreaFrame: CGRect, userMainView: UIView){
 //        let width = (slideAreaWidth ? slideAreaWidth : CGFloat(self.frame.width))
 //        let height = (slideAreaHeight ? slideAreaHeight : CGFloat(self.frame.height))
         behindView = userBehindView
+        mainView = userMainView
+        self.addSubview(mainView)
         self.drawBehindView(behindView)
     
         self.drawSwipeView(frame: slideAreaFrame)
@@ -36,21 +39,7 @@ public class SwipeTVC: UITableViewCell {
             break
             
         case .changed:
-
-            self.contentView.bringSubview(toFront: mainView)
-            let translation = sender.translation(in: self.contentView)
-            print("X Position : ", mainView.frame.minX)
-            if mainView.frame.minX >= 200.0 {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2), execute: {
-                    UIView.animate(withDuration: 3, delay: 0.0, options: .curveEaseOut, animations: {
-                        self.firstRewardSideLabel.alpha = 0.0
-                        self.secondRewardSideLabel.alpha = 0.0
-                        self.thirdRewardSideLabel.alpha = 0.0
-                    }, completion: nil)
-                })
-            }
-            mainView.center = CGPoint(x: mainView.center.x + translation.x, y: mainView.center.y )
-            sender.setTranslation(CGPoint.zero, in: self.contentView)
+            break
             
             
         case .ended:
