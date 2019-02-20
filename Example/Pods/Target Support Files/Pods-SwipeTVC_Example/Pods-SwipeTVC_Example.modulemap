@@ -1,0 +1,6 @@
+framework module Pods_SwipeTVC_Example {
+  umbrella header "Pods-SwipeTVC_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

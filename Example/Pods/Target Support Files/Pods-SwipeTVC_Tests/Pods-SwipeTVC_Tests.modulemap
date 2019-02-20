@@ -1,0 +1,6 @@
+framework module Pods_SwipeTVC_Tests {
+  umbrella header "Pods-SwipeTVC_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
